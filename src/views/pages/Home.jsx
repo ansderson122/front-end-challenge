@@ -3,19 +3,28 @@ import Card from "../../Components/Card"
 
 
 function Home() {
+    const [page,setpage] = useState(1) 
     const [items, setItems] = useState([]);
-
-
+    const [totalPage,settotalPage] = useState(2);
+    const url = 'https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518&page=' + page 
 
     function nextPage(){
-
+        if (page < totalPage){
+            setpage(page+1)
+        }
     }
-   
 
+    function backPage(){
+        setpage(page-1)
+    }
 
     useEffect( () => {
-        fetch('https://blog.apiki.com/wp-json/wp/v2/posts?_embed&categories=518')
-        .then(res => res.json())
+        fetch(url)
+        .then(res =>{ 
+            const totalPage = parseInt(res.headers.get("X-WP-TotalPages"));
+            settotalPage(totalPage)     
+            return res.json()
+        })
         .then(result => {
             const Data = [];
            
@@ -29,32 +38,35 @@ function Home() {
                     id:item,
                     img,
                     title:result[item].title.rendered,
-                    slug: result[item]['slug']
+                    slug: result[item]['slug'],
                 };
                 Data.push(post);
-                console.log(items);
+                
             }
            
-            
             setItems(Data);
+            console.log(Data);
         });}
-    ,[])
-
-    
-
-  
- 
-
+    ,[,page])
 
     return (
         <div>
             home
             {items.map((item)=>( 
                 <Card id={item.id} img={item.img} title={item.title} />           
-            ))}  
+            ))}
 
-            <button onClick={nextPage}>Carrega mais...</button>
-                 
+            <h3>{page}</h3>  
+            {
+                (page === 1)?( <button onClick={nextPage}>Carrega mais...</button>):(
+                    <>
+                        <button onClick={nextPage}>proxima pagina</button>
+                        
+                        <button onClick={backPage}>Volta a pagina</button>
+                    </>
+                )
+            }
+                       
         </div>
     )
 }
