@@ -14,20 +14,6 @@ import PostContet from "./pages/PostContet"
 
 
 function App() {
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <div className="App">
 
@@ -54,8 +40,6 @@ function App() {
               </Routes>
             </div>
       </Router>
-      
-
       
     </div>
   );

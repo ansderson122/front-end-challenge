@@ -1,0 +1,26 @@
+
+.card{
+    display: flex;
+    width: 600px;
+    height: 80px;
+    padding: 5px;
+    background-color: #f1f1f1;
+    opacity: 0.8;
+    
+    border-bottom: solid 1px ;
+    border-color: rgba(10, 10, 10, 0.25);
+
+}
+
+.card:hover{
+    opacity: 1;
+    color: black;
+}
+
+.card h3{
+    padding: 10px ;
+}
+
+.card img{
+    
+}

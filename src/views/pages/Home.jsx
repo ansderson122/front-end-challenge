@@ -45,27 +45,38 @@ function Home() {
             }
            
             setItems(Data);
-            console.log(Data);
+            /* console.log(Data,totalPage); */
         });}
     ,[,page])
 
     return (
         <div>
-            home
-            {items.map((item)=>( 
-                <Card id={item.id} img={item.img} title={item.title} />           
-            ))}
+            <div className="container">
+                <div className="containerCard">
+                    {items.map((item)=>( 
+                        <Card id={item.id} img={item.img} title={item.title} />           
+                        ))}
+                </div>
 
-            <h3>{page}</h3>  
-            {
-                (page === 1)?( <button onClick={nextPage}>Carrega mais...</button>):(
-                    <>
-                        <button onClick={nextPage}>proxima pagina</button>
-                        
-                        <button onClick={backPage}>Volta a pagina</button>
-                    </>
-                )
-            }
+                <div className="containerLateral">
+
+                </div>
+            </div>
+            
+            
+            <div className="navigation">
+               {/*  <h3>{page}</h3>   */}
+                {
+                    (page === 1)?( <button onClick={nextPage}>Carrega mais...</button>):(
+                        <>
+                            <button onClick={nextPage}>proxima pagina</button>
+                            
+                            <button onClick={backPage}>Volta a pagina</button>
+                        </>
+                    )
+                }
+            </div>        
+            
                        
         </div>
     )
