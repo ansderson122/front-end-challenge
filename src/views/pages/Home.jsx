@@ -54,7 +54,7 @@ function Home() {
             <div className="container">
                 <div className="containerCard">
                     {items.map((item)=>( 
-                        <Card id={item.id} img={item.img} title={item.title} />           
+                        <Card id={item.id} img={item.img} title={item.title} slug={item.slug} />           
                         ))}
                 </div>
 

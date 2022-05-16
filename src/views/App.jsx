@@ -10,7 +10,7 @@ import {
 
 
 import Home from "./pages/Home"
-import PostContet from "./pages/PostContet"
+import Post from "./pages/Post"
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
                       <Link to="/">Home</Link>
                     </li>
                     {/* <li>
-                      <Link to="/PostContet">PostContet</Link>
+                      <Link to="/Post">PostContet</Link>
                     </li> */}
                   </ul>
                 </nav>
@@ -39,7 +39,7 @@ function App() {
               {/* A <Switch> looks through its children <Route>s and
                   renders the first one that matches the current URL. */}
               <Routes>
-                <Route path="/PostContet" element={<PostContet />} />
+                <Route path="/Post:slug" element={<Post />} />
                                 
                 <Route path="/" element={<Home />} />
                 
