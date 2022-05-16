@@ -18,17 +18,23 @@ function App() {
     <div className="App">
 
       <Router>
-            <div>
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  {/* <li>
-                    <Link to="/PostContet">PostContet</Link>
-                  </li> */}
-                </ul>
-              </nav>
+            <div> 
+              <div className="navigation">
+                <div className="logo">Apiki</div>
+                <nav>
+                  <ul>
+                    <li>
+                      
+                      <Link to="/">Home</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="/PostContet">PostContet</Link>
+                    </li> */}
+                  </ul>
+                </nav>
+              </div>
+
+              
 
               {/* A <Switch> looks through its children <Route>s and
                   renders the first one that matches the current URL. */}

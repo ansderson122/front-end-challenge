@@ -64,7 +64,7 @@ function Home() {
             </div>
             
             
-            <div className="navigation">
+            <div className="navigationPage">
                {/*  <h3>{page}</h3>   */}
                 {
                     (page === 1)?( <button onClick={nextPage}>Carrega mais...</button>):(
