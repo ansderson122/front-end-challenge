@@ -9,8 +9,8 @@ import {
 } from "react-router-dom";
 
 
-import Home from "./pages/Home"
-import Post from "./pages/Post"
+import Home from "./pages/home/Home"
+import Post from "./pages/post/Post"
 
 
 function App() {

@@ -1,0 +1,60 @@
+.postContainer{
+    padding: 5rem;
+    color: black;
+}
+div.content a{
+    color: blue;
+    padding: 0.5rem;
+}
+
+p{
+    padding-left: 3rem;
+}
+
+
+
+
+.imgPost, div.content img{
+    display: block;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+
+    max-width: 400px;
+}
+
+.imgPost{
+    max-width: 600px;
+}
+
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+pre{
+    display: block;
+    margin: auto;
+    background-color: rgba(26, 32, 53, 0.342);
+    overflow: scroll;
+    max-width: 750px;
+    
+}
+
+pre code{
+   
+
+}
+    
+
+
+
