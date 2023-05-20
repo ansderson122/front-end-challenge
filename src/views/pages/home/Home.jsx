@@ -58,10 +58,6 @@ function Home() {
                         <Card id={item.id} img={item.img} title={item.title} slug={item.slug} />           
                         ))}
                 </div>
-
-                <div className="containerLateral">
-
-                </div>
             </div>
             
             
